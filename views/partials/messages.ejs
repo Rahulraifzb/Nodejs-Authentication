@@ -1,0 +1,33 @@
+<% if(typeof errors != 'undefined') { %>
+    <% errors.forEach(function(error) { %>
+        <div class="alert alert-dismissible alert-light text-warning">
+            <button type="button" class="btn-close close" data-dismiss="alert"></button>
+            <%= error.msg %>
+          </div>
+    <% }) %>
+<% } %>
+
+<% if(success_msg != ""){ %>
+    <div class="alert alert-dismissible alert-light text-success">
+        <button type="button" class="btn-close close" data-dismiss="alert"></button>
+        <%= success_msg %>
+      </div>
+<% } %>
+
+<% if(error_msg != "") { %>
+
+    <div class="alert alert-dismissible alert-light text-warning">
+        <button type="button" class="btn-close close" data-dismiss="alert"></button>
+        <%= error_msg %>
+      </div>
+
+<% } %>
+
+<% if(error != "") { %>
+
+    <div class="alert alert-dismissible alert-light text-warning">
+        <button type="button" class="btn-close close" data-dismiss="alert"></button>
+        <%= error %>
+      </div>
+
+<% } %>
